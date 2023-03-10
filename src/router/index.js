@@ -24,6 +24,10 @@ import ElProgressBars from "../layouts/sections/elements/progress-bars/ProgressB
 import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
 
+import Questions from "../views/Other/Questions/Questions.vue"
+import Cooperation from "../views/Other/Cooperation/Cooperation.vue"
+
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -32,6 +36,17 @@ const router = createRouter({
       name: "presentation",
       component: PresentationView,
     },
+    {
+      path: "/cooperation",
+      name: "cooperation",
+      component: Cooperation,
+    },
+    {
+      path: "/questions",
+      name: "questions",
+      component: Questions,
+    },
+
     {
       path: "/pages/landing-pages/about-us",
       name: "about",
