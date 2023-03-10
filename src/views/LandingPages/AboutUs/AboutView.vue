@@ -100,5 +100,5 @@ onUnmounted(() => {
     <Featuring />
     <Newsletter />
   </div>
-  <DefaultFooter />
+
 </template>
