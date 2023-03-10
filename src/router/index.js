@@ -24,9 +24,16 @@ import ElProgressBars from "../layouts/sections/elements/progress-bars/ProgressB
 import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
 
+import copy from "../views/LandingPages/SignIn/copy.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: "/copy",
+      name: "copy",
+      component: copy,
+    },
     {
       path: "/",
       name: "presentation",
