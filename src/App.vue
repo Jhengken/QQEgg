@@ -1,4 +1,6 @@
 <script setup>
+import DefaultFooter from "./examples/footers/FooterDefault.vue";
+
 /*
 =========================================================
 * Vue Material Kit 2 - v2.0.0
@@ -18,4 +20,5 @@ import { RouterView } from "vue-router";
 
 <template>
   <router-view />
+  <DefaultFooter />
 </template>
