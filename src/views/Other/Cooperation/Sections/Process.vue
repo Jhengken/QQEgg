@@ -1,6 +1,6 @@
 <script setup>
 //Naive
-import { NCard } from "naive-ui";
+import { NTimeline, NTimelineItem, NIcon, NSpace, NButton } from "naive-ui";
 
 // image
 import team4 from "@/assets/img/team-2.jpg";
@@ -14,108 +14,122 @@ import MaterialAvatar from "@/components/MaterialAvatar.vue";
 
 
 <template>
+    <div class="flow-left">
+        <h2>與我們合作</h2>
+        <a href="#">聯絡我們</a>
+        <n-space>
+            <n-button type="warning" size="large">立即註冊</n-button>
+        </n-space>
+
+    </div>
     <div class="process" style="border: 1px #777 solid;  padding: 20px">
-        <h3 style="text-align: center">合作案例</h3>
+        <div class="process-box">
 
-        <n-card title="带封面的卡片" hoverable>
-            <template #header>
-                <div class="title-box">
-                    <div class="title-img">
-                        <a href="javascript:;">
-                            <MaterialAvatar :image="team4" alt="Image placeholder" size="lg" />
-                        </a>
-                    </div>
-                    <div class="title-p" style="vertical-align:middle">
-                        <h5>業主A</h5>
-                        <p>大幅補貼了辦公室的租金！</p>
-                    </div>
-                    <p>“把公司會議室於非上班時段出租，大幅貼補了辦公室的租金！”</p>
-                </div>
-                <div class="img-wrap">
-                    <img :src="Cooperation" />
-                </div>
-                <p class="p-title">
-                    總坪數：10.3 坪<br>每坪分潤：3,300
-                    元/月(僅平日晚上與假日開放)
-                </p>
-                <p>
-                    活用非上班時間的會議室，平日做為公司夥伴的會議空間，假日則做為共享空間出租。
-                </p>
-            </template>
+            <div class="flow-chart">
+                <n-timeline :icon-size="20">
+                    <n-timeline-item color="grey" style="font-weight:bold" content="註冊成為想享會員">
+                        <template #icon>
+                            <n-icon size="30" color="#3d5a80">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 28 28">
+                                    <g fill="none">
+                                        <path
+                                            d="M15 15.001c.124 0 .246.011.364.033c-.462.435-.87.928-1.21 1.467L4 16.5l-.1.01a.51.51 0 0 0-.254.136a.506.506 0 0 0-.136.253L3.5 17v2.5c0 1.339.587 2.329 1.795 3.025c.996.576 2.39.923 3.864.97l.341.005l.435-.01c.786-.035 2.197-.183 3.402-.76c.15.48.346.94.583 1.373c-1.375.644-3.002.897-4.42.897c-3.149 0-7.329-1.248-7.495-5.252L2 19.5V17c0-1.054.816-1.918 1.85-1.995L4 15l11 .001zM25 8.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0zm-4.5-3c-1.654 0-3 1.346-3 3s1.346 3 3 3s3-1.346 3-3s-1.346-3-3-3zM9.5 2a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zm0 1.5c-2.206 0-4 1.794-4 4s1.794 4 4 4s4-1.794 4-4s-1.794-4-4-4zm17.5 17a6.5 6.5 0 1 1-13 0a6.5 6.5 0 0 1 13 0zm-6-4a.5.5 0 0 0-1 0V20h-3.5a.5.5 0 0 0 0 1H20v3.5a.5.5 0 0 0 1 0V21h3.5a.5.5 0 0 0 0-1H21v-3.5z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
 
-        </n-card>
-
-        <n-card title="带封面的卡片" hoverable>
-            <template #header>
-                <div class="title-box">
-                    <div class="title-img">
-                        <a href="javascript:;">
-                            <MaterialAvatar :image="team4" alt="Image placeholder" size="lg" />
-                        </a>
-                    </div>
-                    <div class="title-p" style="vertical-align:middle">
-                        <h5>業主A</h5>
-                        <p>大幅補貼了辦公室的租金！</p>
-                    </div>
-                    <p>“把公司會議室於非上班時段出租，大幅貼補了辦公室的租金！”</p>
-                </div>
-                <div class="img-wrap">
-                    <img :src="Cooperation" />
-                </div>
-                <p class="p-title">
-                    總坪數：10.3 坪<br>每坪分潤：3,300
-                    元/月(僅平日晚上與假日開放)
-                </p>
-                <p>
-                    活用非上班時間的會議室，平日做為公司夥伴的會議空間，假日則做為共享空間出租。
-                </p>
-            </template>
-
-        </n-card>
+                            </n-icon>
+                        </template>
+                    </n-timeline-item>
+                    <n-timeline-item color="grey" style="font-weight:bold" content="填寫申請表單">
+                        <template #icon>
+                            <n-icon size="30" color="#3d5a80">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 16 16">
+                                    <g fill="none">
+                                        <path
+                                            d="M5 1a2 2 0 0 0-2 2v9.998a2 2 0 0 0 2 2h1.046l.25-1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3v2.5A1.5 1.5 0 0 0 9.498 6h2.5v1.44c.306-.209.647-.344 1-.405V5.413a1.5 1.5 0 0 0-.44-1.06L9.645 1.439A1.5 1.5 0 0 0 8.585 1H5zm6.791 4H9.5a.5.5 0 0 1-.5-.5V2.206l2.792 2.792zm1.207 3.06c-.242.071-.47.203-.662.394L8.05 12.74a2.777 2.777 0 0 0-.722 1.257l-.009.033l-.302 1.211a.61.61 0 0 0 .738.74l1.211-.303a2.776 2.776 0 0 0 1.29-.73l4.288-4.288a1.56 1.56 0 0 0-1.545-2.6z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </n-icon>
+                        </template>
+                    </n-timeline-item>
+                    <n-timeline-item color="grey" style="font-weight:bold" content="空間合作" time="初步規劃與預算評估，確認雙方合作意願">
+                        <template #icon>
+                            <n-icon size="30" color="#3d5a80">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 16 16">
+                                    <g fill="none">
+                                        <path
+                                            d="M8.205 2.005a.499.499 0 0 0-.38.175l-.05.036c-1.505-.442-3.212-.1-4.403 1.027c-1.057.999-1.461 2.381-1.213 3.674l-.015.014l-.671.635a1.347 1.347 0 0 0 0 1.98c.342.325.812.457 1.257.396c.064.233.193.454.386.637c.261.247.596.382.938.406c.025.323.168.64.43.887c.26.247.595.382.937.406c.025.323.168.64.43.887a1.545 1.545 0 0 0 1.946.123l.33.312c.58.55 1.523.55 2.104 0c.26-.246.404-.561.43-.883c.34-.025.672-.16.932-.406c.26-.246.404-.561.43-.883c.335-.028.662-.163.92-.405c.201-.191.333-.424.393-.669c.44.053.899-.08 1.236-.398a1.347 1.347 0 0 0 0-1.98l-.594-.562l.113-.42a3.824 3.824 0 0 0-.369-2.886c-.735-1.302-2.158-2.1-3.69-2.1H9.013a2.839 2.839 0 0 0-.138-.003h-.671zm4.372 5.457l.486.48a.5.5 0 0 0 .101.076l.681.644a.412.412 0 0 1 0 .606a.472.472 0 0 1-.64 0l-1.14-1.077a.535.535 0 0 0-.726 0l-.012.01c-.2.19-.2.498 0 .688l.889.84a.413.413 0 0 1 0 .607a.473.473 0 0 1-.593.04a.536.536 0 0 0-.675.045a.467.467 0 0 0-.042.639a.412.412 0 0 1-.04.564a.473.473 0 0 1-.6.035a.536.536 0 0 0-.679.038a.467.467 0 0 0-.044.642c.14.17.127.417-.039.574a.48.48 0 0 1-.65 0l-.322-.304l.084-.079a1.347 1.347 0 0 0 0-1.98a1.514 1.514 0 0 0-.938-.406a1.363 1.363 0 0 0-.43-.887a1.514 1.514 0 0 0-.937-.407a1.363 1.363 0 0 0-.43-.887a1.532 1.532 0 0 0-1.257-.396a1.377 1.377 0 0 0-.386-.636a1.524 1.524 0 0 0-1.102-.41a3.065 3.065 0 0 1 .962-2.591a3.456 3.456 0 0 1 2.58-.923l-1.095.79a1.504 1.504 0 0 0-.294 2.178a1.64 1.64 0 0 0 2.22.3l1.347-.97h1.44l2.281 2.157zM6.168 4.607l2.223-1.602h.485a1.836 1.836 0 0 1 .125.003h1.03c1.192 0 2.272.62 2.82 1.592c.353.623.458 1.34.302 2.026L10.94 4.448a.5.5 0 0 0-.35-.143H8.693a.5.5 0 0 0-.292.094L6.925 5.464a.64.64 0 0 1-.857-.116a.504.504 0 0 1 .1-.74zm1.082 6.628a.472.472 0 0 1 .64.002a.412.412 0 0 1 0 .606l-.672.635a.472.472 0 0 1-.64 0a.412.412 0 0 1 0-.606l.672-.636zm-.726-.687l-.673.637a.472.472 0 0 1-.641 0a.412.412 0 0 1-.01-.596l.01-.01l.671-.635l.01-.01a.472.472 0 0 1 .631.01a.412.412 0 0 1 .002.604zm-1.37-1.291l-.67.634l-.011.01a.472.472 0 0 1-.63-.01a.412.412 0 0 1 0-.606l.67-.634a.472.472 0 0 1 .642 0a.412.412 0 0 1 .01.596l-.01.01zM3.512 8.224l-.671.635a.472.472 0 0 1-.64 0a.412.412 0 0 1 0-.606l.67-.635a.472.472 0 0 1 .641 0a.412.412 0 0 1 0 .606z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </n-icon>
+                        </template>
+                    </n-timeline-item>
+                    <n-timeline-item color="grey" style="font-weight:bold" content="空間正式上線" time="空間營運管理，您可以放心交給我們">
+                        <template #icon>
+                            <n-icon size="30" color="#3d5a80">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 20 20">
+                                    <g fill="none">
+                                        <path
+                                            d="M13.354 8.851a.5.5 0 0 0-.708-.707L9 11.79l-1.646-1.647a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l4-4zm-2.351-6.467a1.5 1.5 0 0 0-2.005 0l-5.5 4.943A1.5 1.5 0 0 0 3 8.443V15.5A1.5 1.5 0 0 0 4.5 17h11a1.5 1.5 0 0 0 1.5-1.5V8.443a1.5 1.5 0 0 0-.497-1.116l-5.5-4.943zm-1.337.744a.5.5 0 0 1 .668 0l5.5 4.943a.5.5 0 0 1 .166.372V15.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V8.443a.5.5 0 0 1 .166-.372l5.5-4.943z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </n-icon>
+                        </template>
+                    </n-timeline-item>
+                    <n-timeline-item color="grey" style="font-weight:bold" content="收取分潤 !" time="房屋所有人可確認營收狀況，收取分潤">
+                        <template #icon>
+                            <n-icon size="30" color="#3d5a80">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 20 20">
+                                    <g fill="none">
+                                        <path
+                                            d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h7a1.5 1.5 0 0 0 1.5-1.5V15a.5.5 0 0 0-.5-.5c-.413 0-.677-.102-.856-.236c-.183-.137-.322-.342-.424-.623c-.214-.588-.22-1.367-.22-2.141a.5.5 0 0 0-.147-.354l-.286-.287l-1.213-1.213c-.467-.467-.604-.78-.63-.955c-.02-.14.022-.234.122-.33c.214-.205.367-.344.54-.386c.103-.026.338-.044.76.378l3 3a.5.5 0 0 0 .708-.707L13 9.793V6.707l2.56 2.56a1.5 1.5 0 0 1 .44 1.061V17.5a.5.5 0 0 0 1 0v-7.172a2.5 2.5 0 0 0-.732-1.767L13 5.293V3.5A1.5 1.5 0 0 0 11.5 2h-7zM12 5.5v3.293l-1.146-1.147c-.579-.578-1.154-.777-1.705-.643a1.517 1.517 0 0 0-.313.115A3.001 3.001 0 0 0 5 10a3 3 0 0 0 5.007 2.23c.017.578.075 1.21.273 1.753c.148.407.384.796.764 1.08l.006.006A1.5 1.5 0 0 0 10 16.5v.5H6v-.5A1.5 1.5 0 0 0 4.5 15H4V5h.5A1.5 1.5 0 0 0 6 3.5V3h4v.5A1.5 1.5 0 0 0 11.5 5h.5v.5zm0 11v.009a.5.5 0 0 1-.5.491H11v-.5a.5.5 0 0 1 .5-.5h.5v.5zM6 10a2 2 0 0 1 1.874-1.996c-.124.23-.187.51-.139.833c.071.482.378.983.911 1.516l.907.907A2 2 0 0 1 6 10zM5 3v.5a.5.5 0 0 1-.5.5H4v-.5a.5.5 0 0 1 .5-.5H5zM4 16h.5a.5.5 0 0 1 .5.5v.5h-.5a.5.5 0 0 1-.5-.5V16zm8-12h-.5a.5.5 0 0 1-.5-.5V3h.5a.5.5 0 0 1 .5.5V4z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </n-icon>
+                        </template>
+                    </n-timeline-item>
+                </n-timeline>
+            </div>
+        </div>
     </div>
 </template>
 
 <style>
 .process {
+
     width: auto;
+    height: 350px;
     margin-top: 80px;
     /* position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0%); */
     background-color: #eaf4f4;
-
+    position: relative
 }
 
-.n-card {
-    max-width: 500px;
-    margin: 10px;
+.process-box {
+    /* width: 1000px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aquamarine; */
+}
+
+.flow-chart {
+    width: 200px;
     display: inline-block;
-}
-
-.img-wrap img {
-    width: 450px;
-    height: 220px;
-    border-radius: 15px
-}
-
-.title-img {
-    float: left;
-    margin: 0 20px 0 0;
-    clear: both;
-    width: 48px;
-    height: 48px;
-}
-
-
-.title-p p {
-    font-size: 16px;
-    font-weight: bold;
-
-}
-
-.p-title {
-    font-weight: bold;
 
 }
 </style>
