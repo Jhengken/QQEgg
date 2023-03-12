@@ -40,8 +40,8 @@ const props = defineProps({
       isLight: this.light,
       isDark: this.dark,
       isSticky: this.sticky,
-      item:[],
-      inputText:'',
+      item: [],
+      inputText: '',
     };
   },
   mounted() {
@@ -178,7 +178,7 @@ watch(
             (props.transparent && textDark.value) || !props.transparent
               ? 'text-dark font-weight-bolder ms-sm-3'
               : 'text-white font-weight-bolder ms-sm-3'
-          ]" href="#" >加入合作空間</a>
+          ]" href="#">加入合作空間</a>
         </ul>
         <ul class="navbar-nav d-lg-block d-none ">
           <li class="nav-item dropdown dropdown-hover ">
@@ -190,8 +190,8 @@ watch(
                 </span>
               </div>
             </a>
-            <div id="dropdown" class="dropdown-menu dropdown-menu-end  mt-0 mt-lg-3 p-3  border-radius-lg" style="margin-top: 4rem !important;"
-              aria-labelledby="dropdownMenuOffset" >
+            <div id="dropdown" class="dropdown-menu dropdown-menu-end  mt-0 mt-lg-3 p-3  border-radius-lg"
+              style="margin-top: 4rem !important;" aria-labelledby="dropdownMenuOffset">
               <RouterLink :to="{ name: 'about' }" class="dropdown-item py-3 ps-3 border-radius-md " :style="action.color"
                 :href="action.route"><span>{{ action.label1 }}</span></RouterLink>
               <a class="dropdown-item py-3 ps-3 border-radius-md" :style="action.color" href="#pricing-soft-ui"

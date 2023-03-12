@@ -147,7 +147,50 @@ const router = createRouter({
       name: "el-typography",
       component: ElTypography,
     },
-
+    {
+      path: "/member/orders",
+      name: "member-orders",
+      component: () => import('../views/Members/Orders/OrdersView.vue'),
+      children: [
+        {
+          path: "inprogress",
+          name: "member-orders-inprogress",
+          component: () => import('../views/Members/Orders/Sections/InProgress.vue'),
+        },
+        {
+          path: "cancel",
+          name: "member-orders-cancel",
+          component: () => import('../views/Members/Orders/Sections/Cancel.vue'),
+        },
+        {
+          path: "finish",
+          name: "member-orders-finish",
+          component: () => import('../views/Members/Orders/Sections/Finish.vue'),
+        },
+      ]
+    },
+    {
+      path: "/member/memberdetail",
+      name: "member-memberdetail",
+      component: () => import('../views/Members/MemberDetail/MemberDetails.vue'),
+      children: [
+        {
+          path: "information",
+          name: "member-memberdetail-information",
+          component: () => import('../views/Members/MemberDetail/Sections/Information.vue'),
+        },
+        {
+          path: "point",
+          name: "member-memberdetail-point",
+          component: () => import('../views/Members/MemberDetail/Sections/Point.vue'),
+        },
+        {
+          path: "creditcard",
+          name: "member-memberdetail-creditcard",
+          component: () => import('../views/Members/MemberDetail/Sections/CreditCard.vue'),
+        },
+      ]
+    },
   ],
 });
 
