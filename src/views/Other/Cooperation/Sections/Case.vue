@@ -6,6 +6,8 @@ import { NCard } from "naive-ui";
 import team4 from "@/assets/img/team-2.jpg";
 import vueMkHeader from "@/assets/img/office-dark.jpg";
 import Cooperation from "@/assets/img/Cooperation.jpg";
+import Cooperation2 from "@/assets/img/Cooperation2.jpg";
+
 
 //Vue Material Kit 2 components
 import MaterialAvatar from "@/components/MaterialAvatar.vue";
@@ -62,7 +64,7 @@ import MaterialAvatar from "@/components/MaterialAvatar.vue";
                         <p>“把公司會議室於非上班時段出租，大幅貼補了辦公室的租金！”</p>
                     </div>
                     <div class="img-wrap">
-                        <img :src="Cooperation" />
+                        <img :src="Cooperation2" />
                     </div>
                     <p class="p-title">
                         總坪數：10.3 坪<br>每坪分潤：3,300
