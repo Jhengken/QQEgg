@@ -17,7 +17,6 @@ import { RouterView } from "vue-router";
 import NavbarDefault from "../src/examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../src/examples/footers/FooterDefault.vue";
 
-
 </script>
 
 <template>
@@ -88,5 +87,5 @@ export default {
       }
     },
   },
-}; 
+};
 </script>

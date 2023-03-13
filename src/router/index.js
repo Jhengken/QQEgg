@@ -26,7 +26,7 @@ import ElTypography from "../layouts/sections/elements/typography/TypographyView
 
 import Questions from "../views/Other/Questions/Questions.vue"
 import Cooperation from "../views/Other/Cooperation/Cooperation.vue"
-
+import RoomGuideView from "../views/RoomGuide/RoomGuideView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -162,6 +162,11 @@ const router = createRouter({
       name: "el-typography",
       component: ElTypography,
     },
+    {
+      path: "/roomguide",
+      name: "RoomGuideView",
+      component: RoomGuideView,
+    }
 
   ],
 });

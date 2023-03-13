@@ -122,163 +122,83 @@ watch(
 );
 </script>
 <template>
-  <nav
-    class="navbar navbar-expand-lg top-0 p-0"
-    :class="{
-      'z-index-3 w-100 shadow-none navbar-transparent position-absolute my-3 ':
-        props.transparent,
-      ' blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0  position-absolute navbar-shrink sticky ':
-        props.sticky,
-      'navbar-light bg-white py-3': props.light,
-      ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark,
-    }"
-  >
-    <div
-      :class="
-        props.transparent || props.light || props.dark
-          ? 'container-fluid'
-          : 'container-fluid '
-      "
-    >
-      <RouterLink
-        class="navbar-brand d-none d-md-block"
-        :class="[
-          (props.transparent && textDark.value) || !props.transparent
-            ? 'text-dark font-weight-bolder ms-sm-3'
-            : 'text-white font-weight-bolder ms-sm-3',
-        ]"
-        :to="{ name: 'presentation' }"
-        rel="tooltip"
-        title="Designed and Coded by Creative Tim"
-        data-placement="bottom"
-      >
-        <font-awesome-icon
-          :icon="['fa', 'house']"
-          size="3x"
-        ></font-awesome-icon>
+  <nav class="navbar navbar-expand-lg top-0 p-0" :class="{
+    'z-index-3 w-100 shadow-none navbar-transparent position-absolute my-3 ':
+      props.transparent,
+    ' blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0  position-absolute navbar-shrink sticky ':
+      props.sticky,
+    'navbar-light bg-white py-3': props.light,
+    ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark,
+  }">
+    <div :class="
+      props.transparent || props.light || props.dark
+        ? 'container-fluid'
+        : 'container-fluid '
+    ">
+      <RouterLink class="navbar-brand d-none d-md-block" :class="[
+        (props.transparent && textDark.value) || !props.transparent
+          ? 'text-dark font-weight-bolder ms-sm-3'
+          : 'text-white font-weight-bolder ms-sm-3',
+      ]" :to="{ name: 'presentation' }" rel="tooltip" title="Designed and Coded by Creative Tim"
+        data-placement="bottom">
+        <font-awesome-icon :icon="['fa', 'house']" size="3x"></font-awesome-icon>
         <span style="font-size: 36px">想享Xing</span>
       </RouterLink>
-      <RouterLink
-        class="navbar-brand d-block d-md-none"
-        :class="
-          props.transparent || props.dark
-            ? 'text-white'
-            : 'font-weight-bolder ms-sm-3'
-        "
-        to="/"
-        rel="tooltip"
-        title="Designed and Coded by Creative Tim"
-        data-placement="bottom"
-      >
+      <RouterLink class="navbar-brand d-block d-md-none" :class="
+        props.transparent || props.dark
+          ? 'text-white'
+          : 'font-weight-bolder ms-sm-3'
+      " to="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
         Material Design
       </RouterLink>
-      <a
-        href="https://www.creative-tim.com/product/vue-material-kit-pro"
-        class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
-        >Buy Now</a
-      >
-      <button
-        class="navbar-toggler shadow-none ms-2"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navigation"
-        aria-controls="navigation"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <a href="https://www.creative-tim.com/product/vue-material-kit-pro"
+        class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block">Buy Now</a>
+      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
           <span class="navbar-toggler-bar bar1"></span>
           <span class="navbar-toggler-bar bar2"></span>
           <span class="navbar-toggler-bar bar3"></span>
         </span>
       </button>
-      <div
-        class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0"
-        id="navigation"
-      >
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
         <ul class="navbar-nav navbar-nav-hover ms-auto">
-          <a
-            class="py-3 ps-3 d-flex"
-            id="title"
-            style="padding-right: 15px; color: aliceblue; font-size: 24px"
+          <RouterLink class="py-3 ps-3 d-flex" id="title" style="padding-right: 15px; color: aliceblue; font-size: 24px"
             :class="[
               (props.transparent && textDark.value) || !props.transparent
                 ? 'text-dark font-weight-bolder ms-sm-3'
                 : 'text-white font-weight-bolder ms-sm-3',
-            ]"
-            href="#"
-            onclick="smoothToPricing('pricing-soft-ui')"
-            @mouseover="ChangeColor"
-            >瀏覽空間</a
-          >
-          <a
-            class="py-3 ps-3 d-flex"
-            id="title"
-            style="padding-right: 15px; color: aliceblue; font-size: 24px"
-            :class="[
-              (props.transparent && textDark.value) || !props.transparent
-                ? 'text-dark font-weight-bolder ms-sm-3'
-                : 'text-white font-weight-bolder ms-sm-3',
-            ]"
-            href="#"
-            >加入合作空間</a
-          >
+            ]" to="/roomguide" onclick="smoothToPricing('pricing-soft-ui')" @mouseover="ChangeColor">瀏覽空間</RouterLink>
+          <a class="py-3 ps-3 d-flex" id="title" style="padding-right: 15px; color: aliceblue; font-size: 24px" :class="[
+            (props.transparent && textDark.value) || !props.transparent
+              ? 'text-dark font-weight-bolder ms-sm-3'
+              : 'text-white font-weight-bolder ms-sm-3',
+          ]" href="#">加入合作空間</a>
         </ul>
         <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item dropdown dropdown-hover">
-            <a
-              id="menu"
-              class="nav-link d-flex align-items-center cursor-pointer happ-icon-menu icon-menu"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              data-bs-offset="10,20"
-            >
-              <div
-                style="
-                  border-radius: 40%;
-                  background-color: rgba(255, 255, 255, 0.7);
-                "
-              >
+            <a id="menu" class="nav-link d-flex align-items-center cursor-pointer happ-icon-menu icon-menu"
+              data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+              <div style="
+                      border-radius: 40%;
+                      background-color: rgba(255, 255, 255, 0.7);
+                    ">
                 <span class="material-icons" style="font-size: 3em">
                   manage_accounts
                 </span>
               </div>
             </a>
-            <div
-              id="dropdown"
-              class="dropdown-menu dropdown-menu-end mt-0 mt-lg-3 p-3 border-radius-lg"
-              style="margin-top: 4rem !important"
-              aria-labelledby="dropdownMenuOffset"
-            >
-              <RouterLink
-                :to="{ name: 'about' }"
-                class="dropdown-item py-3 ps-3 border-radius-md"
-                :style="action.color"
-                :href="action.route"
-                ><span>{{ action.label1 }}</span></RouterLink
-              >
-              <a
-                class="dropdown-item py-3 ps-3 border-radius-md"
-                :style="action.color"
-                href="#pricing-soft-ui"
-                onclick="smoothToPricing('pricing-soft-ui')"
-                >註冊</a
-              >
-              <a
-                class="dropdown-item py-3 ps-3 border-radius-md"
-                :style="action.color"
-                href="#pricing-soft-ui"
-                onclick="smoothToPricing('pricing-soft-ui')"
-                >領取優惠</a
-              >
+            <div id="dropdown" class="dropdown-menu dropdown-menu-end mt-0 mt-lg-3 p-3 border-radius-lg"
+              style="margin-top: 4rem !important" aria-labelledby="dropdownMenuOffset">
+              <RouterLink :to="{ name: 'about' }" class="dropdown-item py-3 ps-3 border-radius-md" :style="action.color"
+                :href="action.route"><span>{{ action.label1 }}</span></RouterLink>
+              <a class="dropdown-item py-3 ps-3 border-radius-md" :style="action.color" href="#pricing-soft-ui"
+                onclick="smoothToPricing('pricing-soft-ui')">註冊</a>
+              <a class="dropdown-item py-3 ps-3 border-radius-md" :style="action.color" href="#pricing-soft-ui"
+                onclick="smoothToPricing('pricing-soft-ui')">領取優惠</a>
 
-              <RouterLink
-                :to="{ name: 'questions' }"
-                class="dropdown-item py-3 ps-3 border-radius-md"
-                :style="action.color"
-                :href="action.route"
-                ><span>常見問答</span></RouterLink
-              >
+              <RouterLink :to="{ name: 'questions' }" class="dropdown-item py-3 ps-3 border-radius-md"
+                :style="action.color" :href="action.route"><span>常見問答</span></RouterLink>
             </div>
           </li>
         </ul>
