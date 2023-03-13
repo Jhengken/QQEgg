@@ -28,117 +28,117 @@ onMounted(() => {
     <div class="container-fluid">
         <div class="row">
             <div class="col-6 gy-8 space-wrapper">
-                <div class="overflow-y-visible">
-                    <Breadcrumbs :routes="[
-                        { label: 'Home', route: '/some-route' },
-                        { label: 'Library', route: '/some-route' },
-                        { label: 'Data' },
-                    ]" />
-                    <div class="space-wrapper__list">
-                        <div class="row g-3">
-                            <div class="col g-3">
-                                <RotatingCard>
-                                    <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
-                                        title="Feel the <br /> Material Kit"
-                                        description="All the Bootstrap components that you need in a development have been re-design with the new look." />
 
-                                    <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
-                                        description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
-                                        :action="[
-                                            {
-                                                route: '/',
-                                                label: 'Start with Headers',
-                                            },
-                                        ]" />
-                                </RotatingCard>
-                            </div>
-                            <div class="col g-3">
-                                <RotatingCard>
-                                    <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
-                                        title="Feel the <br /> Material Kit"
-                                        description="All the Bootstrap components that you need in a development have been re-design with the new look." />
+                <Breadcrumbs :routes="[
+                    { label: 'Home', route: '/some-route' },
+                    { label: 'Library', route: '/some-route' },
+                    { label: 'Data' },
+                ]" />
+                <div class="space-wrapper__list ">
+                    <div class="row g-3">
+                        <div class="col g-3">
+                            <RotatingCard>
+                                <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
+                                    title="Feel the <br /> Material Kit"
+                                    description="All the Bootstrap components that you need in a development have been re-design with the new look." />
 
-                                    <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
-                                        description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
-                                        :action="[
-                                            {
-                                                route: '/',
-                                                label: 'Start with Headers',
-                                            },
-                                        ]" />
-                                </RotatingCard>
-                            </div>
+                                <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
+                                    description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                                    :action="[
+                                        {
+                                            route: '/',
+                                            label: 'Start with Headers',
+                                        },
+                                    ]" />
+                            </RotatingCard>
                         </div>
-                        <div class="row g-3">
-                            <div class="col g-3">
-                                <RotatingCard>
-                                    <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
-                                        title="Feel the <br /> Material Kit"
-                                        description="All the Bootstrap components that you need in a development have been re-design with the new look." />
+                        <div class="col g-3">
+                            <RotatingCard>
+                                <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
+                                    title="Feel the <br /> Material Kit"
+                                    description="All the Bootstrap components that you need in a development have been re-design with the new look." />
 
-                                    <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
-                                        description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
-                                        :action="[
-                                            {
-                                                route: '/',
-                                                label: 'Start with Headers',
-                                            },
-                                        ]" />
-                                </RotatingCard>
-                            </div>
-                            <div class="col g-3">
-                                <RotatingCard>
-                                    <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
-                                        title="Feel the <br /> Material Kit"
-                                        description="All the Bootstrap components that you need in a development have been re-design with the new look." />
-
-                                    <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
-                                        description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
-                                        :action="[
-                                            {
-                                                route: '/',
-                                                label: 'Start with Headers',
-                                            },
-                                        ]" />
-                                </RotatingCard>
-                            </div>
+                                <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
+                                    description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                                    :action="[
+                                        {
+                                            route: '/',
+                                            label: 'Start with Headers',
+                                        },
+                                    ]" />
+                            </RotatingCard>
                         </div>
-                        <div class="row g-3">
-                            <div class="col g-3">
-                                <RotatingCard>
-                                    <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
-                                        title="Feel the <br /> Material Kit"
-                                        description="All the Bootstrap components that you need in a development have been re-design with the new look." />
+                    </div>
+                    <div class="row g-3">
+                        <div class="col g-3">
+                            <RotatingCard>
+                                <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
+                                    title="Feel the <br /> Material Kit"
+                                    description="All the Bootstrap components that you need in a development have been re-design with the new look." />
 
-                                    <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
-                                        description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
-                                        :action="[
-                                            {
-                                                route: '/',
-                                                label: 'Start with Headers',
-                                            },
-                                        ]" />
-                                </RotatingCard>
-                            </div>
-                            <div class="col g-3">
-                                <RotatingCard>
-                                    <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
-                                        title="Feel the <br /> Material Kit"
-                                        description="All the Bootstrap components that you need in a development have been re-design with the new look." />
+                                <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
+                                    description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                                    :action="[
+                                        {
+                                            route: '/',
+                                            label: 'Start with Headers',
+                                        },
+                                    ]" />
+                            </RotatingCard>
+                        </div>
+                        <div class="col g-3">
+                            <RotatingCard>
+                                <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
+                                    title="Feel the <br /> Material Kit"
+                                    description="All the Bootstrap components that you need in a development have been re-design with the new look." />
 
-                                    <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
-                                        description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
-                                        :action="[
-                                            {
-                                                route: '/',
-                                                label: 'Start with Headers',
-                                            },
-                                        ]" />
-                                </RotatingCard>
-                            </div>
+                                <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
+                                    description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                                    :action="[
+                                        {
+                                            route: '/',
+                                            label: 'Start with Headers',
+                                        },
+                                    ]" />
+                            </RotatingCard>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col g-3">
+                            <RotatingCard>
+                                <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
+                                    title="Feel the <br /> Material Kit"
+                                    description="All the Bootstrap components that you need in a development have been re-design with the new look." />
+
+                                <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
+                                    description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                                    :action="[
+                                        {
+                                            route: '/',
+                                            label: 'Start with Headers',
+                                        },
+                                    ]" />
+                            </RotatingCard>
+                        </div>
+                        <div class="col g-3">
+                            <RotatingCard>
+                                <RotatingCardFront image="https://bit.ly/3G5JXJZ" icon="touch_app"
+                                    title="Feel the <br /> Material Kit"
+                                    description="All the Bootstrap components that you need in a development have been re-design with the new look." />
+
+                                <RotatingCardBack image="https://bit.ly/32ZoTGx" title="Discover More"
+                                    description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                                    :action="[
+                                        {
+                                            route: '/',
+                                            label: 'Start with Headers',
+                                        },
+                                    ]" />
+                            </RotatingCard>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="col-6 gy-8 space-wrapper">
                 <div class="mapContainer" ref="mapContainer"></div>
@@ -159,6 +159,13 @@ div {
 .mapContainer {
     width: 100%;
     height: 100%;
+}
+
+.space-wrapper__list {
+    padding: 0 20px;
+    margin: 0;
+    width: 100%;
+    overflow-y: scroll;
 }
 </style>
 <script>
