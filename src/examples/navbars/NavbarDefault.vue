@@ -15,11 +15,7 @@ const props = defineProps({
   },
   transparent: {
     type: Boolean,
-<<<<<<< HEAD
-    default: true,
-=======
     default: false,
->>>>>>> c08a977b8d364d9da1bf9f1e6212bb9ea0a1db32
   },
   light: {
     type: Boolean,
@@ -36,48 +32,6 @@ const props = defineProps({
   darkText: {
     type: Boolean,
     default: false,
-<<<<<<< HEAD
-  },
-  data() {
-    return {
-      isTransparent: this.transparent,
-      isLight: this.light,
-      isDark: this.dark,
-      isSticky: this.sticky,
-      item: [],
-      inputText: "",
-    };
-  },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  watch: {
-    isTransparent(newVal) {
-      this.$emit("update:transparent", newVal);
-    },
-    isSticky(newVal) {
-      this.$emit("update:sticky", newVal);
-    },
-  },
-  methods: {
-    handleScroll() {
-      // Check if the page is scrolled more than 100px
-      if (window.pageYOffset > 100) {
-        this.isTransparent = false;
-        this.isSticky = true;
-      } else {
-        this.isTransparent = true;
-        this.isSticky = false;
-      }
-    },
-    ChangeColor() {
-      document.querySelector("a").style.color = "red";
-    },
-=======
->>>>>>> c08a977b8d364d9da1bf9f1e6212bb9ea0a1db32
   },
 });
 // set arrow  color
@@ -147,11 +101,7 @@ watch(
           : 'text-white font-weight-bolder ms-sm-3',
       ]" :to="{ name: 'presentation' }" rel="tooltip" title="Designed and Coded by Creative Tim"
         data-placement="bottom">
-        <<<<<<< HEAD <font-awesome-icon :icon="['fa', 'house']" size="3x"></font-awesome-icon>
-          <span style="font-size: 36px">想享Xing</span>
-          =======
-          <span style="font-size: 36px">想享Xiang</span>
-          >>>>>>> c08a977b8d364d9da1bf9f1e6212bb9ea0a1db32
+        <span style="font-size: 36px">想享Xiang</span>
       </RouterLink>
       <RouterLink class="navbar-brand d-block d-md-none" :class="
         props.transparent || props.dark
@@ -161,7 +111,7 @@ watch(
         想享Xiang
       </RouterLink>
       <!-- <a href="https://www.creative-tim.com/product/vue-material-kit-pro"
-            class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block">Buy Now</a> -->
+              class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block">Buy Now</a> -->
       <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
         aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
@@ -188,9 +138,9 @@ watch(
             <a id="menu" class="nav-link d-flex align-items-center cursor-pointer" data-bs-toggle="dropdown"
               aria-expanded="false" data-bs-offset="10,20">
               <div style="
-                      border-radius: 40%;
-                      background-color: rgba(255, 255, 255, 0.7);
-                    ">
+                                              border-radius: 40%;
+                                              background-color: rgba(255, 255, 255, 0.7);
+                                            ">
                 <span class="material-icons" style="font-size: 3em">
                   manage_accounts
                 </span>
@@ -198,14 +148,10 @@ watch(
             </a>
             <div id="dropdown" class="dropdown-menu dropdown-menu-end mt-0 mt-lg-3 p-3 border-radius-lg"
               style="margin-top: 4rem !important" aria-labelledby="dropdownMenuOffset">
-
-
               <RouterLink :to="{ name: 'about' }" class="dropdown-item py-3 ps-3 border-radius-md" :style="action.color"
                 :href="action.route"><span>{{ action.label1 }}</span></RouterLink>
-              <RouterLink :to="{ name: 'test' }" class="dropdown-item py-3 ps-3 border-radius-md" :style="action.color"
-                :href="action.route">註冊</RouterLink>
-
-
+              <RouterLink :to="{ name: 'rentroomView' }" class="dropdown-item py-3 ps-3 border-radius-md"
+                :style="action.color" :href="action.route">註冊</RouterLink>
               <a class="dropdown-item py-3 ps-3 border-radius-md" :style="action.color" href="#pricing-soft-ui"
                 onclick="smoothToPricing('pricing-soft-ui')">領取優惠</a>
               <a class="dropdown-item py-3 ps-3 border-radius-md" :style="action.color" href="#pricing-soft-ui"

@@ -23,7 +23,9 @@ import ElDropdowns from "../layouts/sections/elements/dropdowns/DropdownsView.vu
 import ElProgressBars from "../layouts/sections/elements/progress-bars/ProgressBarsView.vue";
 import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
-import test from "../views/RoomGuide/RentRoomView.vue";
+import RentRoomView from "../views/RoomGuide/RentRoomView.vue";
+import RoomGuideView from "../views/RoomGuide/RoomGuideView.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -34,8 +36,8 @@ const router = createRouter({
     },
     {
       path: "/views/roomguide",
-      name: "test",
-      component: test,
+      name: "rentroomView",
+      component: RentRoomView,
     },
     {
       path: "/pages/landing-pages/about-us",
