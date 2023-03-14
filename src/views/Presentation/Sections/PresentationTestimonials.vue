@@ -2,7 +2,7 @@
 
 </script>
 <template>
-  <section class="py-7">
+  <section class="py-3">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mx-auto text-center">

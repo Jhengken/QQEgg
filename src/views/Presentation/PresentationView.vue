@@ -70,39 +70,3 @@ onUnmounted(() => {
   <!-- <DefaultFooter /> -->
 </template>
 
-<script>
-
-
-function load() {
-  var list = document.querySelector('.list');
-  var box = document.querySelector('.box');
-  var left = 0;
-  var timer;
-
-  function move() {
-    clearInterval(timer);
-    timer = setInterval(() => {
-      left -= 2;
-      if (left <= -(7 * 200 + 2 * 24)) {
-        left = 0;
-      }
-      list.style.left = left + 'px';
-    }, 20);
-  }
-
-  move();
-
-  box.onmouseover = function () {
-    clearInterval(timer);
-  };
-
-  box.onmouseleave = function () {
-    move();
-  };
-}
-
-// document.addEventListener('DOMContentLoaded', load);
-
-
-
-</script>

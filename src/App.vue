@@ -21,72 +21,17 @@ import DefaultFooter from "../src/examples/footers/FooterDefault.vue";
 </script>
 
 <template>
-  <div class="container-fluid position-sticky z-index-sticky top-0">
+ <div class="container-fluid position-sticky z-index-sticky top-0" >
     <div class="row">
       <div class="col-12">
-        <NavbarDefault :transparent="isTransparent" :sticky="isSticky" />
+        <NavbarDefault :sticky="true" />
       </div>
     </div>
   </div>
   <router-view />
+
   <DefaultFooter />
 </template>
 
 
 
-<script>
-export default {
-  props: {
-    transparent: {
-      type: Boolean,
-      default: true,
-    },
-    light: {
-      type: Boolean,
-      default: true,
-    },
-    dark: {
-      type: Boolean,
-      default: false,
-    },
-    sticky: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  data() {
-    return {
-      isTransparent: this.transparent,
-      isLight: this.light,
-      isDark: this.dark,
-      isSticky: this.sticky,
-    };
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  watch: {
-    isTransparent(newVal) {
-      this.$emit('update:transparent', newVal);
-    },
-    isSticky(newVal) {
-      this.$emit('update:sticky', newVal);
-    },
-  },
-  methods: {
-    handleScroll() {
-      // Check if the page is scrolled more than 100px
-      if (window.pageYOffset > 100) {
-        this.isTransparent = false;
-        this.isSticky = true;
-      } else {
-        this.isTransparent = true;
-        this.isSticky = false;
-      }
-    },
-  },
-}; 
-</script>
