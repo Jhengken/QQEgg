@@ -23,11 +23,7 @@ import ElDropdowns from "../layouts/sections/elements/dropdowns/DropdownsView.vu
 import ElProgressBars from "../layouts/sections/elements/progress-bars/ProgressBarsView.vue";
 import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
-
-import Questions from "../views/Other/Questions/Questions.vue"
-import Cooperation from "../views/Other/Cooperation/Cooperation.vue"
-import RoomGuideView from "../views/RoomGuide/RoomGuideView.vue"
-
+import test from "../views/RoomGuide/RentRoomView.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -37,16 +33,10 @@ const router = createRouter({
       component: PresentationView,
     },
     {
-      path: "/cooperation",
-      name: "cooperation",
-      component: Cooperation,
+      path: "/views/roomguide",
+      name: "test",
+      component: test,
     },
-    {
-      path: "/questions",
-      name: "questions",
-      component: Questions,
-    },
-
     {
       path: "/pages/landing-pages/about-us",
       name: "about",
@@ -166,8 +156,51 @@ const router = createRouter({
       path: "/roomguide",
       name: "RoomGuideView",
       component: RoomGuideView,
-    }
-
+    },
+    {
+      path: "/member/orders",
+      name: "member-orders",
+      component: () => import('../views/Members/Orders/OrdersView.vue'),
+      children: [
+        {
+          path: "inprogress",
+          name: "member-orders-inprogress",
+          component: () => import('../views/Members/Orders/Sections/InProgress.vue'),
+        },
+        {
+          path: "cancel",
+          name: "member-orders-cancel",
+          component: () => import('../views/Members/Orders/Sections/Cancel.vue'),
+        },
+        {
+          path: "finish",
+          name: "member-orders-finish",
+          component: () => import('../views/Members/Orders/Sections/Finish.vue'),
+        },
+      ]
+    },
+    {
+      path: "/member/memberdetail",
+      name: "member-memberdetail",
+      component: () => import('../views/Members/MemberDetail/MemberDetails.vue'),
+      children: [
+        {
+          path: "information",
+          name: "member-memberdetail-information",
+          component: () => import('../views/Members/MemberDetail/Sections/Information.vue'),
+        },
+        {
+          path: "point",
+          name: "member-memberdetail-point",
+          component: () => import('../views/Members/MemberDetail/Sections/Point.vue'),
+        },
+        {
+          path: "creditcard",
+          name: "member-memberdetail-creditcard",
+          component: () => import('../views/Members/MemberDetail/Sections/CreditCard.vue'),
+        },
+      ]
+    },
   ],
 });
 

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto text-center">
-                <h2 class="mb-4">輕鬆使用 Xinag想享</h2>
+                <h2 class="mb-4">輕鬆使用 Xiang想享</h2>
                 <p class="lead mb-5">簡單三步驟，快速完成場地預訂！</p>
             </div>
         </div>

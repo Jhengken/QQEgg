@@ -20,19 +20,21 @@ import DefaultFooter from "../src/examples/footers/FooterDefault.vue";
 </script>
 
 <template>
-  <div class="container-fluid position-sticky z-index-sticky top-0">
+ <div class="container-fluid position-sticky z-index-sticky top-0" >
     <div class="row">
       <div class="col-12">
-        <NavbarDefault :transparent="isTransparent" :sticky="isSticky" />
+        <NavbarDefault :sticky="true" />
       </div>
     </div>
   </div>
   <router-view />
+
   <DefaultFooter />
 </template>
 
 
 
+<<<<<<< HEAD
 <script>
 export default {
   props: {
@@ -89,3 +91,5 @@ export default {
   },
 };
 </script>
+=======
+>>>>>>> c08a977b8d364d9da1bf9f1e6212bb9ea0a1db32
